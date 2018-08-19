@@ -5,6 +5,8 @@
 #include "keymap_german.h"
 #include "keymap_nordic.h"
 
+#define KEYMAP LAYOUT_ergodox
+
 enum custom_keycodes {
   PLACEHOLDER = SAFE_RANGE, // can always be here
   EPRM,
