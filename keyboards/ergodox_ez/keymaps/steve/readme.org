@@ -1,0 +1,15 @@
+
+* Layout
+
+[[http://www.keyboard-layout-editor.com/#/gists/7b03a83f609b2ebe116b2f12ffcb416f][file:keyboard-layout.png]]
+
+
+
+* Historie
+2.1 https://configure-beta.ergodox-ez.com/layouts/y3l/latest/0
+1.7 https://configure.ergodox-ez.com/keyboard_layouts/yyloby/edit?nordic=true
+
+https://configure.ergodox-ez.com/keyboard_layouts/kmjpej/edit
+
+
+

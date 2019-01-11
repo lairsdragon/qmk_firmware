@@ -35,10 +35,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
   [BASE] = LAYOUT_ergodox
   ( /* Left Hand */
    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,
-   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    ___,
+   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    LALT(S(KC_TAB)),
    MO(GERM),KC_A,    KC_S,    KC_D,    KC_F,    KC_G,
    KC_LSFT, DE_Y,    KC_X,    KC_C,    KC_V,    KC_B,    ALL_T(KC_NO),
-   KC_LCTL, KC_LGUI, KC_LALT, TT(1),   TT(3),
+   KC_LCTL, KC_LGUI, KC_LALT, TT(SYMB),TT(MEDI),
 			  
             ___,     ___,
                      ___,
@@ -46,14 +46,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
    
    /* Right Hand */
    KC_7,    KC_8,    KC_9,    KC_0,    DE_SS,   DE_ACUT, KC_BSPACE,
-   ___,     DE_Z,    KC_U,    KC_I,    KC_O,    KC_P,    LT(GERM,DE_PLUS),
+   LALT(KC_TAB),     DE_Z,    KC_U,    KC_I,    KC_O,    KC_P,    LT(GERM,DE_PLUS),
             KC_H,    KC_J,    KC_K,    KC_L,    DE_HASH, KC_ENTER,
    MEH_T(KC_NO), KC_N,    KC_M,    KC_COMMA,KC_DOT,  KC_UP,   KC_RSHIFT,
    KC_RALT,LT(1,DE_MINS),KC_LEFT,KC_DOWN,KC_RIGHT,
 		       
-   KC_PGUP,CTL_T(KC_ESCAPE),
+   KC_PGUP, CTL_T(KC_ESCAPE),
    KC_PGDOWN,
-   KC_DEL,  KC_DEL, KC_SPACE
+   TT(MEDI),KC_DEL, KC_SPACE
    ),
 
   [SYMB] = LAYOUT_ergodox
@@ -71,12 +71,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
    KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,   ___,
    ___,     KC_UP,   KC_7,    KC_8,    KC_9,    DE_ASTR,  ___,
             KC_DOWN, KC_4,    KC_5,    KC_6,    DE_PLUS,  ___,
-   ___,     DE_AMPR, KC_1,    KC_2,    KC_3,    DE_BSLS,  ___,
+   ___,     DE_AMPR, KC_1,    KC_2,    KC_3,    DE_SLSH,  ___,
                      ___,     DE_DOT,  KC_0,    DE_EQL,   ___,
 
-   RGB_TOG,RGB_SLD,
-   ___,
-   ___,RGB_HUD,RGB_HUI
+            RGB_TOG,RGB_SLD,
+                    ___,
+   ___,     RGB_HUD,RGB_HUI
    ),
 
   [GERM] = LAYOUT_ergodox
@@ -87,15 +87,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
    ___,     DE_LESS, DE_PIPE, DE_MORE, ___,     ___,      ___,
    ___,     ___,     ___,     ___,     ___,
 		       
-   ___,     ___,
-   ___,
+            ___,     ___,
+                     ___,
    ___,     ___,     ___,
 
    KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12,   KC_DELETE,
    ___,     ___,     DE_UE,   ___,     DE_OE,   ___,      ___,
             ___,     ___,     ___,     ___,     ___,      ___,
    ___,     ___,     ___,     ___,     ___,     KC_PGUP,  ___,
-   ___,     ___,     ___,     KC_PGDOWN,___,
+                     ___,     ___,     KC_HOME, KC_PGDN,  KC_END,
 
    ___,     ___,
    ___,
