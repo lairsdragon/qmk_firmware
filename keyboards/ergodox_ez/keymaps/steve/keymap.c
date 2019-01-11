@@ -25,6 +25,7 @@ enum custom_keycodes {
   NAME,
   MAIL,
   WORK,
+  RT,
 };
 
 uint16_t showlayer = 1;
@@ -84,7 +85,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] =
    DE_CIRC, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,    KC_F6,
    ___,     DE_AT,   NAME,    DE_EURO, MAIL,    ___,      ___,
    ___,     DE_AE,   DE_SS,   ___,     WORK,    ___,
-   ___,     DE_LESS, DE_PIPE, DE_MORE, ___,     ___,      ___,
+   ___,     DE_LESS, DE_PIPE, DE_MORE, RT,      ___,      ___,
    ___,     ___,     ___,     ___,     ___,
 		       
             ___,     ___,
@@ -178,6 +179,18 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   case WORK:
     if (record->event.pressed) {
       SEND_STRING ("steffen.weinreich"SS_RALT("q")"mdex.de");
+    }
+    return false;
+    break;
+  case RT:
+    if (record->event.pressed) {
+      /* int i;*/
+      
+      SEND_STRING ("rt]"SS_RALT("q")"rt.ic3s.de"SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT)SS_TAP(X_LEFT));
+      /*      for(i=0;i++;i<11) {
+	         SEND_STRING (SS_TAP("q"));
+	      }
+      */
     }
     return false;
     break;
